@@ -50,28 +50,28 @@ jobs:
           name: storybook-output
           path: ./apps/docs/storybook-static
 
-  release:
-    needs: [build]
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+  # release:
+  #   needs: [build]
+  #   if: github.ref == 'refs/heads/main'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
+  #     - name: Install Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 20
 
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: storybook-output
-          path: ./apps/docs/storybook-static
+  #     - name: Download artifact
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: storybook-output
+  #         path: ./apps/docs/storybook-static
 
-      - name: Deploy to gh-pages branch
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
-          publish_dir: ./apps/docs/storybook-static
+  #     - name: Deploy to gh-pages branch
+  #       if: github.ref == 'refs/heads/main'
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
+  #         publish_dir: ./apps/docs/storybook-static
