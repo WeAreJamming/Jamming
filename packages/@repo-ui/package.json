@@ -1,0 +1,53 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui",
+    "test:bench": "vitest bench",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@repo/tsup-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "14.2.1",
+    "@testing-library/user-event": "14.5.2",
+    "@types/react": "18.2.61",
+    "@types/react-dom": "18.2.19",
+    "@vanilla-extract/css": "1.14.1",
+    "@vanilla-extract/esbuild-plugin": "2.3.5",
+    "@vanilla-extract/recipes": "0.5.2",
+    "@vanilla-extract/sprinkles": "1.6.1",
+    "@vanilla-extract/vite-plugin": "4.0.6",
+    "@vitest/ui": "1.4.0",
+    "eslint": "8.57.0",
+    "jsdom": "24.0.0",
+    "react": "18.2.0",
+    "tsup": "8.0.2",
+    "typescript": "5.3.3",
+    "vitest": "1.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@repo/themes": "workspace:*",
+    "clsx": "^2.1.0"
+  }
+}
