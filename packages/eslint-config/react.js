@@ -40,8 +40,6 @@ module.exports = {
     '.eslintrc.js',
     '**/*.css',
     'tsup.config.ts',
-    'vitest.config.ts',
-    'vitest.setup.ts',
   ],
   // add rules configurations here
   rules: {

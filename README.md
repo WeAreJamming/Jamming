@@ -25,9 +25,6 @@
 - `pnpm run lint:packages:list` - 패키지 간의 종속성 목록을 검사합니다.
 - `pnpm run lint:packages:mismatches` - 패키지 간의 버전 불일치를 찾습니다.
 - `pnpm run lint:packages:fix-mismatches` - 패키지 간의 버전 불일치를 자동으로 수정합니다.
-- `pnpm run test` - 모든 테스트를 실행합니다. 단위 테스트와 통합 테스트를 포함할 수 있습니다.
-- `pnpm run test:watch` - 파일 변경 시 테스트를 자동으로 재실행합니다.
-- `pnpm run test:ui` - UI 컴포넌트의 테스트를 실행합니다. 주로 Storybook을 사용할 때 활용됩니다.
 - `pnpm run clean` - 빌드 시 생성된 모든 임시 파일과 폴더를 제거합니다.
 - `pnpm run format` - 코드 포맷터를 실행하여 코드 스타일을 일관되게 유지합니다. 주로 Prettier를 사용합니다.
 - `pnpm run changeset` - 변경 사항을 관리하고 버전을 업데이트하는 데 사용합니다.

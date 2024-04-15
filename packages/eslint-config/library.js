@@ -34,7 +34,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'dist/', 'vitest.config.ts'],
+  ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-sort-props': [
